@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self'; form-action 'self'; base-uri 'self'; object-src 'none'">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#0a1024">
+    <meta name="description" content="Case de UX/UI: sistema de gestão de sinistros de automóvel da seguradora fictícia Travessia Seguros.">
+    <title>Entrar | Sinistro Auto</title>
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Sora:wght@500;600&amp;display=swap">
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#login-form">Pular para o formulário de acesso</a>
+
+    <div class="login">
+      <section class="login__media" aria-labelledby="login-chamada">
+        <div class="login__top">
+          <span class="brand">
+            <img class="brand__mark" src="img/favicon.svg" alt="" width="38" height="38">
+            <span class="brand__text">
+              <span class="brand__name">Sinistro Auto</span>
+              <span class="brand__sub">Travessia Seguros</span>
+            </span>
+          </span>
+          <span class="case-tag">Case de UX/UI · 2020</span>
+        </div>
+
+        <h2 id="login-chamada">Quem bateu o carro quer uma resposta rápida.</h2>
+        <p>Aviso, análise, orçamento da oficina, indenização e pagamento num lugar só, com a fila organizada para o time não perder nenhum prazo.</p>
+
+        <ul class="login__highlights">
+          <li><svg class="icon" aria-hidden="true" focusable="false"><use href="img/icons.svg#i-route"/></svg> Distribuição automática da fila de processos</li>
+          <li><svg class="icon" aria-hidden="true" focusable="false"><use href="img/icons.svg#i-shield"/></svg> Orçamentos e pagamentos dentro da alçada de cada pessoa</li>
+          <li><svg class="icon" aria-hidden="true" focusable="false"><use href="img/icons.svg#i-clock"/></svg> O prazo de cada etapa sempre à vista</li>
+        </ul>
+
+        <div class="login__art" aria-hidden="true">
+          <div class="login__art-row"><span class="login__art-placa"><span class="placa placa--sm"><span class="placa__faixa">BRASIL</span><span class="placa__num">RFY4W68</span></span> Sinistro 3140213-1 · Colisão</span><strong>Em reparo</strong></div>
+          <ol class="login__art-steps">
+            <li class="is-done">Aviso</li>
+            <li class="is-done">Orçamento</li>
+            <li class="is-current">Reparo</li>
+            <li>Pagamento</li>
+          </ol>
+          <div class="login__art-row"><span>Orçamento autorizado</span><strong>R$ 6.840,00</strong></div>
+          <div class="login__art-saving"><svg class="icon" aria-hidden="true" focusable="false"><use href="img/icons.svg#i-check-circle"/></svg> Dentro do prazo: faltam 9 dias</div>
+        </div>
+      </section>
+
+      <main class="login__panel" id="conteudo">
+        <form class="login__form" id="login-form" novalidate>
+          <span class="eyebrow">Acesso restrito</span>
+          <h1>Que bom te ver por aqui</h1>
+          <p>Entre com sua matrícula e senha para ver a sua caixa de entrada.</p>
+
+          <div class="login__fields">
+            <div class="field">
+              <label for="login-matricula">Matrícula <span class="req" aria-hidden="true">*</span></label>
+              <input class="input" id="login-matricula" name="matricula" type="text" autocomplete="username"
+                     maxlength="7" required data-rules="matricula" data-mask="upper" spellcheck="false"
+                     aria-describedby="login-matricula-dica">
+              <p class="hint" id="login-matricula-dica">Uma letra e 6 números, como T204518.</p>
+            </div>
+
+            <div class="field">
+              <label for="login-senha">Senha <span class="req" aria-hidden="true">*</span></label>
+              <div class="login__pass">
+                <input class="input" id="login-senha" name="senha" type="password" autocomplete="current-password"
+                       maxlength="40" required>
+                <button class="btn btn--ghost btn--icon btn--sm" type="button" id="login-ver-senha" aria-pressed="false" aria-label="Mostrar senha">
+                  <svg class="icon" aria-hidden="true" focusable="false"><use href="img/icons.svg#i-eye"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <button class="btn btn--primary btn--block" type="submit">
+            Entrar
+            <svg class="icon" aria-hidden="true" focusable="false"><use href="img/icons.svg#i-arrow-right"/></svg>
+          </button>
+
+          <div class="login__demo">
+            <p><strong>Este é um case de portfólio.</strong> Não existe login de verdade e nada do que você digita sai do seu navegador. Travessia Seguros é uma marca fictícia.</p>
+            <button class="btn btn--ghost btn--sm" type="button" id="login-demo">
+              <svg class="icon" aria-hidden="true" focusable="false"><use href="img/icons.svg#i-sparkle"/></svg>
+              Usar o acesso de demonstração
+            </button>
+          </div>
+        </form>
+      </main>
+    </div>
+
+    <script src="js/common.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/login.js"></script>
+  </body>
+</html>

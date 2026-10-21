@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self'; form-action 'self'; base-uri 'self'; object-src 'none'">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#2d50bd">
+    <meta name="description" content="Painel do turno no sistema Sinistro Auto.">
+    <title>Início | Sinistro Auto</title>
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Sora:wght@500;600&amp;display=swap">
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="topbar"></header>
+    <div class="context-bar"></div>
+
+    <main class="content" id="conteudo" tabindex="-1">
+      <div class="turno">
+        <section class="turno__boas-vindas" aria-labelledby="pagina-titulo">
+          <span class="eyebrow"><svg class="icon" aria-hidden="true" focusable="false"><use href="img/icons.svg#i-clock"/></svg> Seu turno</span>
+          <h1 id="pagina-titulo">Olá!</h1>
+          <p id="hero-texto">Veja como estão os sinistros hoje.</p>
+          <div class="btn-row">
+            <button class="btn btn--accent" id="pegar-proximo" type="button"><svg class="icon" aria-hidden="true" focusable="false"><use href="img/icons.svg#i-zap"/></svg> Pegar o próximo processo</button>
+            <a class="btn" href="caixa.html">Abrir a caixa de entrada</a>
+          </div>
+        </section>
+
+        <section class="proximo" aria-labelledby="proximo-titulo">
+          <h2 id="proximo-titulo">Próximo da sua fila</h2>
+          <div id="proximo"></div>
+        </section>
+      </div>
+
+      <h2 class="visually-hidden" id="kpis-titulo">Indicadores do turno</h2>
+      <ul class="kpis" id="kpis" aria-labelledby="kpis-titulo"></ul>
+
+      <div class="grid-2">
+        <section class="card" aria-labelledby="caixa-titulo">
+          <div class="card__head">
+            <div>
+              <h2 id="caixa-titulo">Na sua caixa</h2>
+              <p>Na ordem em que a distribuição sugere tratar.</p>
+            </div>
+            <a href="caixa.html">Ver todos</a>
+          </div>
+          <div id="minha-caixa"></div>
+        </section>
+
+        <section class="card" aria-labelledby="estourados-titulo">
+          <div class="card__head">
+            <div>
+              <h2 id="estourados-titulo">Prazos estourados</h2>
+              <p>Processos abertos que passaram do prazo da posição atual.</p>
+            </div>
+          </div>
+          <div id="estourados"></div>
+        </section>
+      </div>
+
+      <section class="card" aria-labelledby="fluxo-titulo">
+        <div class="card__head">
+          <div>
+            <h2 id="fluxo-titulo">A estrada de um sinistro</h2>
+            <p>Cada parada fica registrada no histórico do processo, com quem fez e quando.</p>
+          </div>
+        </div>
+        <ol class="jornada jornada--leve" aria-labelledby="fluxo-titulo">
+          <li class="is-done"><span class="jornada__ponto" aria-hidden="true">1</span><strong>Aviso</strong><span>O segurado conta o que aconteceu e o sistema confere a apólice.</span></li>
+          <li class="is-done"><span class="jornada__ponto" aria-hidden="true">2</span><strong>Distribuição</strong><span>O processo entra na fila do grupo certo e vai para quem está livre.</span></li>
+          <li class="is-done"><span class="jornada__ponto" aria-hidden="true">3</span><strong>Análise</strong><span>Documentos, cobertura, franquia e orçamento da oficina.</span></li>
+          <li class="is-done"><span class="jornada__ponto" aria-hidden="true">4</span><strong>Reparo ou indenização</strong><span>O carro é consertado ou indenizado de forma integral.</span></li>
+          <li class="is-done"><span class="jornada__ponto" aria-hidden="true">5</span><strong>Pagamento</strong><span>Alguém com alçada libera o valor, nunca quem pediu.</span></li>
+          <li class="is-current"><span class="jornada__ponto" aria-hidden="true">6</span><strong>Ressarcimento</strong><span>Se o terceiro causou o acidente, a seguradora cobra dele.</span></li>
+        </ol>
+      </section>
+    </main>
+
+    <footer class="app-footer"></footer>
+
+    <script src="js/common.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/inicio.js"></script>
+  </body>
+</html>
