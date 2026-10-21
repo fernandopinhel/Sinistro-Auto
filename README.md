@@ -10,7 +10,7 @@
 ![WCAG 2.2 AA](https://img.shields.io/badge/acessibilidade-WCAG%202.2%20AA-1b7a43)
 ![Sem dependências](https://img.shields.io/badge/dependências%20de%20runtime-0-57627a)
 
-[Ver o protótipo](https://fernandopinhel.github.io/prototipo-GSRE/) ·
+[Ver o protótipo](https://fernandopinhel.github.io/Sinistro-Auto/) ·
 [Como rodar](#como-rodar-localmente) ·
 [O case](#o-case)
 
@@ -20,7 +20,7 @@
 
 > **Este é um case de portfólio.** O projeto nasceu entre 2020 e 2021, numa empresa onde
 > trabalhei, como protótipo do módulo de sinistros de automóvel de um sistema de gestão de
-> sinistros de ramos elementares (o GSRE do nome do repositório). Ele foi recriado aqui para
+> sinistros de ramos elementares (o GSRE, que deu o nome original ao repositório). Ele foi recriado aqui para
 > mostrar o processo e o resultado. Para preservar a empresa e o cliente, a interface usa a
 > seguradora fictícia **Travessia Seguros**. Segurados, apólices, placas, chassis, oficinas,
 > CPFs, CNPJs e valores são todos de exemplo, e nada do que você digita sai do seu navegador.
@@ -274,8 +274,8 @@ ao `file://`, porque a CSP e o sprite de ícones se comportam de forma diferente
 arquivos locais.
 
 ```bash
-git clone https://github.com/fernandopinhel/prototipo-GSRE.git
-cd prototipo-GSRE
+git clone https://github.com/fernandopinhel/Sinistro-Auto.git
+cd Sinistro-Auto
 
 # Opção 1: Python
 python3 -m http.server 8080
@@ -302,7 +302,7 @@ O site é publicado direto da branch `master` (**Settings → Pages → Deploy f
 pasta `/`). A cada merge na `master`, o GitHub atualiza o site em cerca de um minuto. O
 arquivo `.nojekyll` faz o GitHub servir os arquivos como estão, sem processar com Jekyll.
 
-Endereço: <https://fernandopinhel.github.io/prototipo-GSRE/>
+Endereço: <https://fernandopinhel.github.io/Sinistro-Auto/>
 
 ---
 
