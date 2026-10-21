@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self'; form-action 'self'; base-uri 'self'; object-src 'none'">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#2d50bd">
+    <meta name="description" content="Detalhe do processo de sinistro.">
+    <title>Processo | Sinistro Auto</title>
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Sora:wght@500;600&amp;display=swap">
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="topbar"></header>
+    <div class="context-bar"></div>
+
+    <main class="content" id="conteudo" tabindex="-1">
+      <div id="proc-cabecalho"></div>
+      <div class="proc-layout">
+        <div class="proc-main">
+          <div id="proc-alertas"></div>
+          <nav class="no-print" id="proc-abas" aria-label="Partes do processo"></nav>
+          <div id="proc-conteudo"></div>
+        </div>
+        <aside class="proc-aside" id="proc-ficha" aria-label="Ficha rápida do processo"></aside>
+      </div>
+    </main>
+
+    <footer class="app-footer"></footer>
+
+    <script src="js/common.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/processo.js"></script>
+  </body>
+</html>

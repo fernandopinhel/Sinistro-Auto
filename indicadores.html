@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self'; form-action 'self'; base-uri 'self'; object-src 'none'">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#2d50bd">
+    <meta name="description" content="Indicadores de tempo e pagamentos de sinistros.">
+    <title>Indicadores | Sinistro Auto</title>
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Sora:wght@500;600&amp;display=swap">
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="topbar"></header>
+    <div class="context-bar"></div>
+
+    <main class="content" id="conteudo" tabindex="-1">
+      <div class="page-head">
+        <div class="page-head__text">
+          <span class="eyebrow">Gestão</span>
+          <h1 id="pagina-titulo">Indicadores</h1>
+          <p id="pagina-descricao">Tempo de cada etapa, pagamentos por natureza e a situação das filas. Os números vêm dos processos do protótipo.</p>
+        </div>
+        <div class="page-head__actions"></div>
+      </div>
+
+      <section class="card filters no-print" aria-labelledby="filtros-titulo">
+        <div class="card__head"><h2 id="filtros-titulo">Período</h2></div>
+        <form id="filtros" aria-label="Escolher o período dos indicadores" novalidate>
+          <div class="form-grid"></div>
+          <div class="filters__actions">
+            <button class="btn btn--primary" type="submit"><svg class="icon" aria-hidden="true" focusable="false"><use href="img/icons.svg#i-refresh"/></svg> Atualizar</button>
+          </div>
+        </form>
+      </section>
+
+      <h2 class="visually-hidden" id="kpis-titulo">Números do período</h2>
+      <ul class="kpis" id="kpis" aria-labelledby="kpis-titulo"></ul>
+
+      <section class="card card--flush" aria-labelledby="etapas-titulo">
+        <div class="table-toolbar">
+          <div><h2 id="etapas-titulo">Tempo médio de cada etapa</h2><p>Dos sinistros pagos no período, do aviso até o pagamento.</p></div>
+          <div class="btn-row"><button class="btn btn--sm" type="button" data-csv="etapas"><svg class="icon" aria-hidden="true" focusable="false"><use href="img/icons.svg#i-download"/></svg> Exportar CSV</button></div>
+        </div>
+        <div id="etapas"></div>
+      </section>
+
+      <section class="card card--flush" aria-labelledby="naturezas-titulo">
+        <div class="table-toolbar">
+          <div><h2 id="naturezas-titulo">Pagamentos por natureza</h2><p>Quantidade e valor pago no período.</p></div>
+          <div class="btn-row"><button class="btn btn--sm" type="button" data-csv="naturezas"><svg class="icon" aria-hidden="true" focusable="false"><use href="img/icons.svg#i-download"/></svg> Exportar CSV</button></div>
+        </div>
+        <div id="naturezas"></div>
+      </section>
+
+      <div class="grid-2 grid-2--igual">
+        <section class="card card--flush" aria-labelledby="posicoes-titulo">
+          <div class="table-toolbar">
+            <div><h2 id="posicoes-titulo">Processos abertos por posição</h2><p>Hoje, com o tempo médio parado em cada posição.</p></div>
+            <div class="btn-row"><button class="btn btn--sm" type="button" data-csv="posicoes"><svg class="icon" aria-hidden="true" focusable="false"><use href="img/icons.svg#i-download"/></svg> CSV</button></div>
+          </div>
+          <div id="posicoes"></div>
+        </section>
+
+        <section class="card card--flush" aria-labelledby="analistas-titulo">
+          <div class="table-toolbar">
+            <div><h2 id="analistas-titulo">Por analista</h2><p>Processos encerrados no período e caixa de hoje.</p></div>
+            <div class="btn-row"><button class="btn btn--sm" type="button" data-csv="analistas"><svg class="icon" aria-hidden="true" focusable="false"><use href="img/icons.svg#i-download"/></svg> CSV</button></div>
+          </div>
+          <div id="analistas"></div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="app-footer"></footer>
+
+    <script src="js/common.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/indicadores.js"></script>
+  </body>
+</html>

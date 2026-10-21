@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self'; form-action 'self'; base-uri 'self'; object-src 'none'">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#2d50bd">
+    <meta name="description" content="Processos com o analista e fila do grupo.">
+    <title>Caixa de entrada | Sinistro Auto</title>
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Sora:wght@500;600&amp;display=swap">
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="topbar"></header>
+    <div class="context-bar"></div>
+
+    <main class="content" id="conteudo" tabindex="-1">
+      <div class="page-head">
+        <div class="page-head__text">
+          <span class="eyebrow">Atendimento</span>
+          <h1 id="pagina-titulo">Caixa de entrada</h1>
+          <p id="pagina-descricao">Os processos que estão com você e a fila do seu grupo, na ordem da distribuição automática.</p>
+        </div>
+        <div class="page-head__actions"><button class="btn btn--primary" id="pegar-proximo" type="button"><svg class="icon" aria-hidden="true" focusable="false"><use href="img/icons.svg#i-zap"/></svg> Pegar o próximo processo</button></div>
+      </div>
+
+      <div id="devolucao"></div>
+
+      <section class="card card--flush" aria-labelledby="minha-titulo">
+        <div class="table-toolbar">
+          <div>
+            <h2 id="minha-titulo">Com você</h2>
+            <p id="minha-total"></p>
+          </div>
+          <div class="btn-row"><button class="btn btn--sm" id="marcar-news" type="button" disabled><svg class="icon" aria-hidden="true" focusable="false"><use href="img/icons.svg#i-check"/></svg> Marcar news como tratadas</button><button class="btn btn--sm" id="devolver" type="button" disabled><svg class="icon" aria-hidden="true" focusable="false"><use href="img/icons.svg#i-undo"/></svg> Devolver para a fila</button></div>
+        </div>
+        <div id="minha"></div>
+      </section>
+
+      <section class="card card--flush" aria-labelledby="fila-titulo" id="fila">
+        <div class="table-toolbar">
+          <div>
+            <h2 id="fila-titulo">Fila do seu grupo</h2>
+            <p id="fila-total"></p>
+          </div>
+          <div class="btn-row"><a class="btn btn--sm" href="distribuicao.html"><svg class="icon" aria-hidden="true" focusable="false"><use href="img/icons.svg#i-route"/></svg> Como a fila é ordenada</a></div>
+        </div>
+        <div id="fila-lista"></div>
+      </section>
+    </main>
+
+    <footer class="app-footer"></footer>
+
+    <script src="js/common.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/caixa.js"></script>
+  </body>
+</html>
