@@ -7,7 +7,7 @@ de segurados, veículos ou empresas.
 ## Reportando uma vulnerabilidade
 
 Se encontrar um problema de segurança, abra um
-[security advisory privado](https://github.com/fernandopinhel/prototipo-GSRE/security/advisories/new)
+[security advisory privado](https://github.com/fernandopinhel/Sinistro-Auto/security/advisories/new)
 em vez de uma issue pública.
 
 ## Medidas adotadas
